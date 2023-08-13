@@ -1,8 +1,18 @@
 const arr1 = [1, 'a', 5, '2', true];
 
-arr1.forEach((element) =>{
-    console.log(element);
-});
+const num = arr1.filter((element)=>{
+    if(typeof element === 'number'){
+        return element;
+    }
+})
+// console.log(num);
+
+// const numb = arr1.forEach((element) =>{
+//     if(typeof element === 'number'){
+//         console.log(element);
+//     }
+// })
+
 
 
 const products = [
@@ -11,15 +21,26 @@ const products = [
 	{ name: 'Màn hình Samsung 23 inch', price: 1500, quantity: 2 },
 	{ name: 'Airpod 2', price: 100, quantity: 20 },
 ]
-let sum = 0;
-const abc = (name, price, quantity) =>{
-    products.forEach((element) => {
-        console.log(`${element.quantity} chiếc ${element.name} giá ${element.price}$`)
-        sum+=element.price;
-    });
-    console.log(`Tổng hóa đơn: ${sum}$`);
-}
-abc();
+// let sum = 0;
+// const abc = (name, price, quantity) =>{
+//     products.forEach((element) => {
+//         console.log(`${element.quantity} chiếc ${element.name} giá ${element.price*element.quantity}`)
+//         sum+=element.price*element.quantity;
+//     });
+//     console.log(`Tổng hóa đơn: ${sum}$`);
+// }
+// abc();
+
+let s = 0;
+const tong = products.forEach((product)=>{
+    const sum =  product.quantity * product.price;
+    s+= sum;
+    console.log(s);
+})
+
+
+
+
 
 
 let students = [
@@ -27,8 +48,6 @@ let students = [
 	{ name: 'John', score: 8 },
 	{ name: 'Peter', score: 4 },
 ];
-
-
 
 let sc = 0;
 let nm = "";
