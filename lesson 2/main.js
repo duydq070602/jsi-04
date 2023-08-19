@@ -27,6 +27,18 @@ const array3 = array.filter((number) =>{
 })
 console.log(array3);
 
+// const arrayN = array.filter((number) =>{
+//     if(number%2 === 0 ){
+//         return true;
+//     }
+//     return false;
+// })
+// console.log(arrayN);
+
+const arrayX = array.filter((number) => number%2 ===0);
+
+
+
 //forEach
 
 var Language = ['Javascript', 'HTML', 'CSS'];
@@ -40,7 +52,7 @@ const array5 = Language.forEach((Language) =>{
 const arr1 = [1, 'a', 5, '2', true];
 const num = arr1.filter((element)=>{
     if(typeof element === 'number'){
-        return element
+        return element;
     }
 })
 
