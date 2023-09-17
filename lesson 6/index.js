@@ -19,7 +19,6 @@ button.addEventListener('click', function(){
 })
 onValue(shopping, function(snapshot){
     const itemArray = Object.entries(snapshot.val())
-    console.log(itemArray)
     clearShoppingList()
     for(let i=0; i<itemArray.length;i++){
         let currentItem = itemArray[i];
